@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>Hand gesture app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script type="text/javascript"
+        src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=p5yyjxO_VEbTWd-E-i_vlq5SAbYZb1JbMYQH13ZrrstAAmdN03tXrTyKPiH-82mERPXpqP9FYtPyIQImkrpGS3ItzTnMoOH9QpbSA2ihFYrLTbFo6_hzyTs06wPmwaBnSkYQXRbECrDX6-AAmdX3Z3YUqIuVYBRaCuJUmjnQS-BBcl5GO-13r58SZrzoUUnyB4fk1qcLXW6Ag6goDzsT1z-hV-pr3g9Z_XsgXjDL_0rTKdLEB1L_eXhK3EPslv3QzL5I1E2plQDM1M8JPCAjui4hNghRUwsxO_f255y-Vkfbia55uBwpWcaBaPlRXSbzNHcM-a1vrW6JhsPn-oHFOg"
+        charset="UTF-8"></script>
+    <link rel="stylesheet" crossorigin="anonymous"
+        href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9kb2MtMGctNmMtZG9jcy5nb29nbGV1c2VyY29udGVudC5jb20vZG9jcy9zZWN1cmVzYy9jNTYwMzRuNDQ0OGhnMWNjN2JwZm52OGZpNjU4aGR1cy9hNTZoNTRmOWE4OHVmcTgxYTBwbzhrZW1zYWJiYmZpYi8xNjE3ODEwNjAwMDAwLzAxOTYxNTI0MjExNjY2MTUxNzI0LzEwMzc5MzY0NTEyNDY1OTUxMDUxLzE2YVVLNEhvWThhNU1RTW5kejYycEZZNm53a1JWa21WQT9lPWRvd25sb2FkJmF1dGh1c2VyPTA" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <link rel="stylesheet" href = "style.css">
+</head>
+
+<body>
+    <div class="container">
+        <center>
+            <h3 class="btn btn-warning heading">Emotion To Emoji App
+                <br>
+                <span>&#128076;</span>
+                <span>&#128077;</span>
+                <span>&#9996;</span>
+            </h3>
+            <br>
+            <br>
+            <p style="font-size:22px;">TAKE YOUR SELFIE TO GENRATE EMOJI
+                <br><b style="color:yellow;">Are you happy</b>
+                <br>
+                <b style="color:green;">Are you Sad</b><br>
+                <b style="color:red;">Are you Angry</b></p>
+            <div class="col-md-4 col-sm-12 col-xs-12"><label>Webcame View</label>
+                <div id="camera"></div>
+                <br><br>
+                <button onclick="takesnapshot()" class="btn btn-warning">Capture Image</button>
+            </div>
+            <div class="col-mg-4 col-sm-12 col-xs-12"><label>Prediction 1-</label>
+                <p class="emotion_name" id="result_emotion_name"></p>
+                <p class="Emoji" id="update_emoji_1"></p>
+                <label>Prediction 2-</label>
+                <p class="emotion_name" id="result_emotion_name2"></p>
+                <p class="Emoji" id="update_emoji_2"></p>
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12"><label>Snapshot</label>
+                <div id="result"></div>
+                <br><br>
+                <button onclick="check()" class="btn btn-success">Predict emotion</button>
+            </div>
+        </center>
+    </div>
+    <script src = "main.js"></script>
+</body>
+
+</html>
